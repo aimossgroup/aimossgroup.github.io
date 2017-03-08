@@ -13,7 +13,7 @@ body {
 	border-color: transparent;
 	border-width: 0;
 	box-shadow: 0 -1px 16px #cccccc;
-	transition-duration: 0.7s;
+	transition: background-color 0.7s ease-out;
 }
 
 .navbar.shrink {
@@ -65,8 +65,10 @@ body {
 }
 
 .navbar-header {
+	min-height: 40px;
 	float: none;
 	text-align: left;
+	transition: min-height 0.5s ease-out;
 }
 
 .navbar-nav {
@@ -290,7 +292,7 @@ body {
 }
 
 .page_footer .social_nav {
-	margin-top: 10px;
+	margin-top: 0;
 	margin-bottom: 0;
 }
 
@@ -359,6 +361,10 @@ body {
 	    border-bottom: 2px solid #777777;
 	}
 	.shrink .navbar-header {
+		min-height: 0px;
+		height: 0px;
+	}
+	.shrink .navbar-brand {
 		display: none;
 	}
 	.shrink .social_nav {
