@@ -23,7 +23,7 @@
 <body>
 	<!-- NAV BAR 
 	===================================================-->
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -33,21 +33,39 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.html">Александр</a>
+				<a class="navbar-brand" href="index.html">Александр Волков</a>
 	    	</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="index.html">Главная</a></li>
+					<li><a href="index.html">Главная <span class="sr-only">(current)</span></a></li>
 					<li><a href="portfolio.html">Портфолио</a></li>
 					<li><a href="prices.html">Услуги и Цены</a></li>
 					<li><a href="testimonials.html">Отзывы клиентов</a></li>
-					<li class="active"><a href="contacts.html">Контакты <span class="sr-only">(current)</span></a></li>	        
+					<li class="active"><a href="contacts.html">Контакты</a></li>
+					<li>
+						<ul class="social_nav">
+							<li><a href=""><i class="fa fa-skype"></i></a></li>
+							<li><a href="http://vk.com" target="_blank"><i class="fa fa-vk"></i></a></li>
+							<li><a href=""><i class="fa fa-whatsapp"></i></a></li>
+						</ul>				
+					</li>        
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
 	</nav>
+	
+	<!--NAVBAR transformation on scroll ========================================== -->
+	<script>
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > 200){ // Set position from top to add class
+			$('.navbar').addClass("shrink");
+			} else {
+			$('.navbar').removeClass("shrink");
+			}
+		});
+	</script>
 	
 	<!-- SERVICES 
 	==========================================================-->
