@@ -10,8 +10,13 @@ header, section, footer, aside, nav, main, article, figure {
     display: block; 
 }
 
+a:hover {
+	text-decoration: none;
+	color: #000000;
+}
+
 .nav>li {
-	padding: 0 15px;
+	padding: 0 12px;
 }
 
 .nav>li>a {
@@ -50,14 +55,15 @@ header, section, footer, aside, nav, main, article, figure {
 
 
 .navbar-default .navbar-nav>li>a {
-	border: 2px solid transparent;
+	border-bottom: 2px solid transparent;
     color: #333333;
+    transition: border 0.7s;
 }
 
 /*jumping menu fix*/
 .navbar-nav>li:last-child {
 	margin: 0 auto;
-	width: 115px;
+	width: 120px;
 }/*end of the fix*/
 
 .navbar-default .navbar-nav>li>a:hover {
@@ -112,6 +118,24 @@ header, section, footer, aside, nav, main, article, figure {
     background-color: transparent;
 }
 
+.navbar-default .navbar-toggle[aria-expanded="true"] .icon-bar {
+	transition: margin-top 0.5s, transform 0.5s 0.5s;
+}
+
+.navbar-default .navbar-toggle[aria-expanded="true"] .icon-bar:nth-of-type(3) {
+	background-color: transparent;
+}
+
+.navbar-default .navbar-toggle[aria-expanded="true"] .icon-bar:nth-of-type(2) {
+	margin-top: 6px;
+	transform: rotate(45deg);
+}
+
+.navbar-default .navbar-toggle[aria-expanded="true"] .icon-bar:nth-of-type(4) {
+	margin-top: -8px;
+	transform: rotate(-45deg);
+}
+
 .navbar-default .navbar-collapse, 
 .navbar-default .navbar-form {
     border-color: #cccccc;
@@ -132,6 +156,25 @@ header, section, footer, aside, nav, main, article, figure {
 
 .carousel-indicators li {
 	opacity: 0;
+}
+
+.accent-menu {
+	text-align: center;
+	padding-bottom: 60px;
+}
+
+.accent-menu-item {
+	display: inline-block;
+	margin: 60px 20px 0 20px;
+	min-width: 250px;
+	width: 20%;
+	color: #989898;
+	vertical-align: top;
+}
+
+.accent-menu-item[class*="icon-"]:before {
+	font-size: 50px;
+	color: #989898;
 }
 
 .portfolio {
@@ -327,7 +370,8 @@ header, section, footer, aside, nav, main, article, figure {
 
 .social_nav {
 	list-style-type: none;
-	-webkit-padding-start: 0px;	
+	-webkit-padding-start: 0px;
+	-moz-padding-start: 0px;
 }
 
 .page_footer .social_nav {
@@ -360,6 +404,7 @@ header, section, footer, aside, nav, main, article, figure {
 	color: #989898;	
 	line-height: 20px;
 	text-decoration: none;
+	transition: color 0.7s;
 }
 
 .social_nav a:hover,
@@ -369,18 +414,18 @@ header, section, footer, aside, nav, main, article, figure {
 
 a.back-to-top {
 	display: none;
-	width: 60px;
-	height: 60px;
-	font-size: 50px;
+	width: 50px;
+	height: 50px;
+	font-size: 45px;
 	line-height: 40px;
 	text-align: center;
 	position: fixed;
 	z-index: 999;
 	right: 20px;
-	bottom: 20px;
+	bottom: 15px;
 	color: #989898;
 	background: #ffffff;
-	box-shadow: 0px 0px 10px -5px #777777;
+	box-shadow: 0px 5px 10px -6px #777777;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
@@ -390,13 +435,20 @@ a.back-to-top {
 
 a.back-to-top:hover {
 	color: #777777;	
-	box-shadow: 0px 0px 12px -5px #777777;
+	box-shadow: 0px 5px 12px -5px #777777;
 }
 
 @media (min-width: 361px) {
 	.navbar-header {
 		text-align: center;
 	}
+}
+
+@media (min-width: 408px) {
+	a.back-to-top {
+		bottom: 50px;
+	}
+
 }
 
 @media (min-width: 768px) {
