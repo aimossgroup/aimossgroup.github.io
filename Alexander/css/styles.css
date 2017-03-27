@@ -63,7 +63,7 @@ a:hover {
 /*jumping menu fix*/
 .navbar-nav>li:last-child {
 	margin: 0 auto;
-	width: 120px;
+	width: 147px;
 }/*end of the fix*/
 
 .navbar-default .navbar-nav>li>a:hover {
@@ -141,6 +141,8 @@ a:hover {
     border-color: #cccccc;
 }
 
+/*HOME PAGE CAROUSEL*/
+
 .img-responsive {
 	min-width: 100%;
 }
@@ -157,6 +159,8 @@ a:hover {
 .carousel-indicators li {
 	opacity: 0;
 }
+
+/*HOME PAGE ACCENT MENU*/
 
 .accent-menu {
 	text-align: center;
@@ -177,6 +181,7 @@ a:hover {
 	color: #989898;
 }
 
+/*HOME PAGE PORTFOLIO SECTION*/
 .portfolio {
 	padding-top:60px; 
 	padding-bottom: 80px;
@@ -253,6 +258,8 @@ a:hover {
 .portfolio__block:hover .button {
 	border: 1px solid #ffffff;
 }
+
+/*HOME PAGE ABOUT SECTION*/
 
 .about.dark .about__text {
 	color: #ffffff;
@@ -352,6 +359,98 @@ a:hover {
 	background-color: rgba(0, 0, 0, 0.1);
 }*/
 
+/*PORTFOLIO PAGE*/
+
+.portfolio_page {
+	margin-top: 100px;
+}
+
+input[name="portfolio_tab"] {
+	display: none;
+}
+
+.tab_controls {
+	text-align: center;
+}
+
+.tab_controls label {
+	padding: 10px 15px;
+	font-weight: 400;
+	font-style: italic;
+	transition-duration: 0.5s;
+	cursor: pointer;
+}
+
+.tab_controls label:hover,
+#tab-1:checked ~ .tab_controls label:nth-of-type(1), 
+#tab-2:checked ~ .tab_controls label:nth-of-type(2), 
+#tab-3:checked ~ .tab_controls label:nth-of-type(3), 
+#tab-4:checked ~ .tab_controls label:nth-of-type(4), 
+#tab-5:checked ~ .tab_controls label:nth-of-type(5) {
+	color: #a0814d;
+}
+
+#tab-1:checked ~ .gallery_wrapper .photoshoot.tab1 {
+	display: block;
+}
+#tab-2:checked ~ .gallery_wrapper .photoshoot.tab2 {
+	display: block;
+}
+#tab-3:checked ~ .gallery_wrapper .photoshoot.tab3 {
+	display: block;
+}
+#tab-4:checked ~ .gallery_wrapper .photoshoot.tab4 {
+	display: block;
+}
+#tab-5:checked ~ .gallery_wrapper .photoshoot.tab5 {
+	display: block;
+}
+
+.gallery_wrapper .photoshoot {
+	display: none;
+	margin: 15px 0;
+}
+
+.photoshoot_text .hover_link {
+	display: none;
+}
+
+.gallery_wrapper .photoshoot:hover>img {
+	opacity: 0.2;
+}
+
+.gallery_wrapper .photoshoot:hover .photoshoot_text {
+	color: #333333;
+}
+
+.gallery_wrapper .photoshoot:hover .hover_link {
+	display: block;
+	margin-top: -10px; 
+	font-size: 80%;
+	color: #a0814d;
+}
+
+.photoshoot:hover .hover_link:hover {
+	color: #333333;
+}
+
+.photoshoot_text {
+	position: absolute;
+	top: 45%;
+	width: calc(100% - 30px);
+	color: #ffffff;
+	font-size: 130%;
+	font-style: italic;
+	text-align: center;
+}
+
+.photoshoot_text b {
+	font-weight: 400;
+}
+
+
+/*PAGE FOOTER*/
+
 .page_footer {
 	background-color: #ffffff;
 	font-size: 18px;
@@ -363,10 +462,6 @@ a:hover {
 .page_footer .brand-name{	
 	line-height: 60px;
 }
-
-/*.navbar-nav>li {
-	min-width: 40px;
-}*/
 
 .social_nav {
 	list-style-type: none;
@@ -412,6 +507,8 @@ a:hover {
 	color: #333333;
 }
 
+/*BACK TO TOP BUTTON*/
+
 a.back-to-top {
 	display: none;
 	width: 50px;
@@ -453,7 +550,7 @@ a.back-to-top:hover {
 
 @media (min-width: 768px) {
 	.navbar {
-		background-color: rgba(255, 255, 255, 0.7);
+		background-color: rgba(255, 255, 255, 0.8);
 	}
 	.navbar-nav {
 	    padding-bottom: 0px;
@@ -487,19 +584,22 @@ a.back-to-top:hover {
 	.shrink .social_nav {
 		display: none;
 	}
+	.shrink .navbar-nav li:last-child {
+		width: auto;
+	}
 	.carousel-indicators li {
 	opacity: 0.7;
-	}
-	.button {
-	border-color: transparent;
 	}
 	.about__button {
 	border-color: #ffffff;
 	}
 }
 
-@media (min-width: 992px) {
-	.social_nav {
+@media (min-width: 992px) {	
+	.navbar-nav .social_nav {
+		text-align: left;
+	}
+	.page_footer .social_nav {
 		text-align: right;
 	}
 	.about__text {
@@ -512,5 +612,11 @@ a.back-to-top:hover {
 	}
 	.page_footer .brand-name{	
 		text-align: left;
+	}
+}
+
+@media (min-width: 1025px) {
+	.portfolio .button {
+	border-color: transparent;
 	}
 }
