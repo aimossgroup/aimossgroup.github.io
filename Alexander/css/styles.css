@@ -331,10 +331,6 @@ a:hover {
 
 /*PORTFOLIO PAGE*/
 
-.portfolio_page {
-	padding-top: 100px;
-}
-
 input[name="portfolio_tab"] {
 	display: none;
 }
@@ -584,6 +580,7 @@ a.back-to-top:hover {
 	.page_wrapper { /*sticking footer*/
 		position: relative;
 		min-height: 100%;
+		padding-top: 100px;
 	}
 	.page_wrapper>.container { /*sticking footer*/
 		padding-bottom: 172px;
@@ -615,9 +612,8 @@ a.back-to-top:hover {
 	.page_footer .brand-name{	
 		text-align: left;
 	}
-	.portfolio_page.container { /*sticking footer*/
+	.page_wrapper>.container { /*sticking footer*/
 		padding-bottom: 60px;
-		min-height: 100%;
 }
 
 @media (min-width: 1025px) {
