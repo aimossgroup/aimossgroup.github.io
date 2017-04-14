@@ -1,3 +1,8 @@
+html,
+body {
+	height: 100%;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -14,10 +19,6 @@ a:hover {
 	text-decoration: none;
 	color: #a0814d;
 }
-
-/*.nav>li {
-	padding: 0 12px;
-}*/
 
 .nav>li>a {
 	padding-left: 12px;
@@ -38,18 +39,9 @@ a:hover {
 	background-color: #ffffff;
 }
 
-/*.navbar-default .navbar-nav>.active>a,
-.navbar-default .navbar-nav>.active>a:hover {
-	color: #C4893D;
-	background-color: transparent;
-	font-style: italic;
-}*/
-
-
 .navbar-default .navbar-nav>.active>a, 
 .navbar-default .navbar-nav>.active>a:hover {
     background-color: transparent;
-	/*font-style: italic;*/
 	color: #a0814d;
 }
 
@@ -303,7 +295,7 @@ a:hover {
 
 .about__photo {
 	padding: 0;
-	min-height: 400px;
+	min-height: 450px;
 	background-image: url(../img/photographer.jpg);
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
@@ -340,7 +332,7 @@ a:hover {
 /*PORTFOLIO PAGE*/
 
 .portfolio_page {
-	margin-top: 100px;
+	padding-top: 100px;
 }
 
 input[name="portfolio_tab"] {
@@ -524,13 +516,15 @@ a.back-to-top:hover {
 	.navbar-header {
 		text-align: center;
 	}
+	.about__photo {
+	min-height: 430px;
+	}
 }
 
 @media (min-width: 408px) {
 	a.back-to-top {
 		bottom: 50px;
 	}
-
 }
 
 @media (min-width: 768px) {
@@ -579,10 +573,26 @@ a.back-to-top:hover {
 		width: auto;
 	}
 	.carousel-indicators li {
-	opacity: 0.7;
+		opacity: 0.7;
 	}
 	.about__button {
-	border-color: #ffffff;
+		border-color: #ffffff;
+	}
+	.about__photo {
+		min-height: 400px;
+	}
+	.page_wrapper { /*sticking footer*/
+		position: relative;
+		min-height: 100%;
+	}
+	.page_wrapper>.container { /*sticking footer*/
+		padding-bottom: 172px;
+	}
+	.page_wrapper>.page_footer { /*sticking footer*/
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
 	}
 }
 
@@ -605,10 +615,13 @@ a.back-to-top:hover {
 	.page_footer .brand-name{	
 		text-align: left;
 	}
+	.portfolio_page.container { /*sticking footer*/
+		padding-bottom: 60px;
+		min-height: 100%;
 }
 
 @media (min-width: 1025px) {
 	.portfolio .button {
-	border-color: transparent;
+		border-color: transparent;
 	}
 }
