@@ -224,7 +224,7 @@ a:hover {
 	width: 50px;
 	height: 1px;
 	bottom: 0;
-	background-color: #777777;
+	background-color: #a0814d;
 	left: 50%;
 }
 
@@ -458,6 +458,49 @@ input[name="portfolio_tab"] {
 	padding-bottom: 20px;
 }
 
+/*CONTACTS PAGE*/
+
+.contacts_form,
+.contacts_list {
+	padding-left: 30px;
+}
+
+.form_input {
+	margin-bottom: 20px;
+	width: 100%;
+	border: 1px solid transparent;
+	border-bottom-color: #cccccc;
+}
+
+.form_input:focus {
+	outline: 1px solid #a0814d;
+}
+
+input[type="submit"] {
+	background-color: transparent;
+	border: 1px solid #cccccc;
+	padding: 15px 20px;
+	margin-bottom: 50px;
+	transition-duration: 0.5s; 
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+	border-color: #a0814d;
+	color: #a0814d;
+	outline-style: none;
+}
+
+.contacts_list .social_nav li {
+	margin: 10px;
+}
+
+.contacts_list ul li {
+	margin-bottom: 20px;
+}
+
+
 .page_wrapper { /*sticking footer*/
 	position: relative;
 	min-height: 100%;
@@ -490,10 +533,12 @@ input[name="portfolio_tab"] {
 	line-height: 60px;
 }
 
-.social_nav {
+.social_nav,
+.contacts {
 	list-style-type: none;
 	-webkit-padding-start: 0px;
 	-moz-padding-start: 0px;
+	text-align: center;
 }
 
 .page_footer .social_nav {
@@ -501,14 +546,17 @@ input[name="portfolio_tab"] {
 	margin-bottom: 0;
 }
 
-.social_nav li{
+.social_nav li {
 	display: inline-block;
 	margin:10px 5px;
+}
+
+.social_nav li,
+.contacts li {
 	font-family: 'FontAwesome';
 	color: #cccccc;
 	font-size: 16px;
 	font-weight: 400;
-	text-align: center;
 }
 
 .page_footer .social_nav li{
@@ -522,14 +570,17 @@ input[name="portfolio_tab"] {
 }
 
 .social_nav a:link,
-.social_nav a:visited {
+.social_nav a:visited,
+.contacts a:link,
+.contacts a:visited {
 	color: #989898;	
 	line-height: 20px;
 	text-decoration: none;
 	transition: color 0.7s;
 }
 
-.social_nav a:hover {
+.social_nav a:hover,
+.contacts a:hover {
 	color: #a0814d;
 }
 
@@ -636,6 +687,10 @@ a.back-to-top:hover {
 	}
 	.about__photo {
 		min-height: 400px;
+	}
+	.contacts_form,
+	.contacts_list {
+		padding-left: 15px;
 	}
 	.page_wrapper { /*sticking footer*/
 		padding-top: 100px;
