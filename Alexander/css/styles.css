@@ -448,6 +448,11 @@ input[name="portfolio_tab"] {
 	text-align: center;
 }
 
+.services__photo,
+.services__extras {
+	padding: 35px;
+}
+
 .services__video {
 	padding-top: 20px;
 	background-color: #252928;
@@ -496,7 +501,7 @@ input[type="submit"]:focus {
 }
 
 .contacts_list ul li {
-	margin-bottom: 20px;
+	margin-bottom: 45px;
 }
 
 .region_p {
