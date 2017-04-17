@@ -428,7 +428,7 @@ input[name="portfolio_tab"] {
 	font-weight: 400;
 }
 
-.contactme_aside {
+.aside_note {
 	text-align: center;
 	font-size: 135%;
 }
@@ -460,20 +460,18 @@ input[name="portfolio_tab"] {
 
 /*CONTACTS PAGE*/
 
-.contacts_form,
-.contacts_list {
-	padding-left: 30px;
-}
-
 .form_input {
 	margin-bottom: 20px;
 	width: 100%;
 	border: 1px solid transparent;
 	border-bottom-color: #cccccc;
+	border-radius: 0;
 }
 
 .form_input:focus {
 	outline: 1px solid #a0814d;
+	outline-offset: 0px;
+	border-bottom-color: transparent; 
 }
 
 input[type="submit"] {
@@ -500,6 +498,10 @@ input[type="submit"]:focus {
 	margin-bottom: 20px;
 }
 
+.region_p {
+	text-align: center;
+	margin-bottom: 30px; 
+}
 
 .page_wrapper { /*sticking footer*/
 	position: relative;
@@ -626,6 +628,9 @@ a.back-to-top:hover {
 }
 
 @media (min-width: 408px) {
+	.page_wrapper>main { /*sticking footer*/
+		padding-bottom: 172px;
+	}
 	a.back-to-top {
 		bottom: 50px;
 	}
@@ -694,9 +699,6 @@ a.back-to-top:hover {
 	}
 	.page_wrapper { /*sticking footer*/
 		padding-top: 100px;
-	}
-	.page_wrapper>main { /*sticking footer*/
-		padding-bottom: 172px;
 	}
 }
 
