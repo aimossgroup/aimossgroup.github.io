@@ -477,6 +477,7 @@ input[name="portfolio_tab"] {
 input[type="submit"] {
 	background-color: transparent;
 	border: 1px solid #cccccc;
+	border-radius: 0;
 	padding: 15px 20px;
 	margin-bottom: 50px;
 	transition-duration: 0.5s; 
@@ -555,7 +556,6 @@ input[type="submit"]:focus {
 
 .social_nav li,
 .contacts li {
-	font-family: 'FontAwesome';
 	color: #cccccc;
 	font-size: 16px;
 	font-weight: 400;
