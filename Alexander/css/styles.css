@@ -379,11 +379,13 @@ input[name="portfolio_tab"] {
 #tab-4:checked ~ .gallery_wrapper .photoshoot.tab4 {
 	display: block;
 }
-#tab-5:checked ~ .gallery_wrapper .photoshoot.tab5 {
+#tab-5:checked ~ .gallery_wrapper .photoshoot.tab5,
+#tab-5:checked ~ .gallery_wrapper .vidos.tab5 {
 	display: block;
 }
 
-.gallery_wrapper .photoshoot {
+.gallery_wrapper .photoshoot,
+.gallery_wrapper .vidos {
 	display: none;
 	margin: 15px 0;
 }
@@ -392,14 +394,26 @@ input[name="portfolio_tab"] {
 	display: none;
 	transition-duration: 0.3s;
 }
-.gallery_wrapper .photoshoot>img {
+
+.vidos_text .hover_link {
 	transition-duration: 0.3s;
 }
-.gallery_wrapper .photoshoot:hover>img {
+
+.hover_link>.fa {
+	font-size: 300%;
+}
+
+.gallery_wrapper .photoshoot>img,
+.gallery_wrapper .vidos>img {
+	transition-duration: 0.3s;
+}
+.gallery_wrapper .photoshoot:hover>img,
+.gallery_wrapper .vidos:hover>img {
 	opacity: 0.2;
 }
 
-.gallery_wrapper .photoshoot:hover .photoshoot_text {
+.gallery_wrapper .photoshoot:hover .photoshoot_text,
+.gallery_wrapper .vidos:hover .vidos_text {
 	color: #333333;
 }
 
@@ -410,13 +424,25 @@ input[name="portfolio_tab"] {
 	color: #a0814d;
 }
 
-.photoshoot:hover .hover_link:hover {
+.gallery_wrapper .vidos .hover_link {
+	display: block;
+	margin-top: -10px;
+	color: white;
+	opacity: 0.7;
+}
+
+.gallery_wrapper .vidos:hover .hover_link {
+	color: #a0814d;
+}
+
+.photoshoot:hover .hover_link:hover,
+.vidos:hover .hover_link:hover {
 	color: #333333;
 }
 
-.photoshoot_text {
+.photoshoot_text,
+.vidos_text {
 	position: absolute;
-	top: 45%;
 	width: calc(100% - 30px);
 	color: #ffffff;
 	font-size: 130%;
@@ -424,9 +450,17 @@ input[name="portfolio_tab"] {
 	text-align: center;
 }
 
-.photoshoot_text b {
-	font-weight: 400;
+.photoshoot_text {
+	top: 45%;
 }
+
+.vidos_text {
+	top: 25%;
+}
+
+
+
+/*PRICES PAGE*/
 
 .aside_note {
 	text-align: center;
