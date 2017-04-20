@@ -400,7 +400,7 @@ input[name="portfolio_tab"] {
 }
 
 .hover_link>.fa {
-	font-size: 300%;
+	font-size: 400%;
 }
 
 .gallery_wrapper .photoshoot>img,
@@ -455,7 +455,7 @@ input[name="portfolio_tab"] {
 }
 
 .vidos_text {
-	top: 25%;
+	top: 40%;
 }
 
 
@@ -732,6 +732,9 @@ a.back-to-top:hover {
 	.about__photo {
 		min-height: 400px;
 	}
+	.vidos_text {
+		top: 25%;
+	}
 	.contacts_form,
 	.contacts_list {
 		padding-left: 15px;
@@ -756,6 +759,9 @@ a.back-to-top:hover {
 	.about__h2:after {
 		left: 0;
 		margin-left: 0;
+	}
+	.vidos_text {
+		top: 30%;
 	}
 	.page_footer .brand-name{	
 		text-align: left;
