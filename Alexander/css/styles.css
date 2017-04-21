@@ -496,6 +496,15 @@ input[name="portfolio_tab"] {
 	color: #ffffff;
 	padding-bottom: 20px;
 }
+/*TESTIMONIES*/
+
+.image-wrapper {
+	display: block;
+}
+
+.image-wrapper img {
+	width: 100%;
+}
 
 /*CONTACTS PAGE*/
 
