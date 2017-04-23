@@ -496,14 +496,56 @@ input[name="portfolio_tab"] {
 	color: #ffffff;
 	padding-bottom: 20px;
 }
+
+
 /*TESTIMONIES*/
 
+.client__testmny {
+    background: #fff;
+    padding: 4%;
+    margin: 3% 0;
+}
 .image-wrapper {
 	display: block;
 }
-
 .image-wrapper img {
 	width: 100%;
+}
+ .testmny_text{
+	text-align: justify;
+	border-top: 1px dotted #777;
+	padding: 1%;
+	color: grey;
+}
+.testmny_form{
+	text-align: center;
+	margin-left: 25%;
+}
+ .signature_clients{
+	margin-top:1.3em;
+    border-top: 1px dotted #777;
+    padding:1%;
+}
+ .client__testmny .photo p{
+   display: none;
+}
+.client__testmny .photo:hover img{
+    opacity: 0.2;
+    transition-duration: 0.3s;
+}
+.client__testmny .photo:hover p{
+   display: block;
+   position: absolute;
+   font-style: italic;	
+   font-size: 180%;
+   color: #a0814d;
+   top: 40%;
+   left: 20%;
+}
+.client__testmny:hover {
+background: whitesmoke;
+box-shadow: 0px 0px 15px -2px #424242;
+border-radius: 4px;
 }
 
 /*CONTACTS PAGE*/
