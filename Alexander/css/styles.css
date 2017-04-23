@@ -531,7 +531,7 @@ input[name="portfolio_tab"] {
 }
 .client__testmny .photo:hover img{
     opacity: 0.2;
-    transition-duration: 0.3s;
+    /*transition-duration: 0.3s;*/
 }
 .client__testmny .photo:hover p{
    display: block;
